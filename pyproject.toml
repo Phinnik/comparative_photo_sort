@@ -1,0 +1,38 @@
+[project]
+name = "compsort"
+version = "1.0.0"
+description = "Photo labeling and sorting tool"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [{ name = "Filipp Zdorov", email = "elecdron@gmail.com" }]
+
+dependencies = ["typed-argument-parser==1.8.1", "Pillow==10.0.0"]
+
+[project.optional-dependencies]
+dev = ["pre-commit"]
+
+[project.scripts]
+compsort = "src.__main__:main"
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pylint."messages control"]
+disable = [
+    "missing-module-docstring",
+    "missing-function-docstring"
+]
+
+[tool.mypy]
+
+[tool.black]
+
+[tool.isort]
+profile = "black"
+src_paths = ["src", "test"]
+known_first_party = []
+known_third_party = []
