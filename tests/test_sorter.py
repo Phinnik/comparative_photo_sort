@@ -1,6 +1,6 @@
 import pytest
 
-from src.sorting import Sorter
+from src.sorting.sorter import Sorter
 
 
 class TestSorter:
