@@ -9,7 +9,7 @@ authors = [{ name = "Filipp Zdorov", email = "elecdron@gmail.com" }]
 dependencies = ["typed-argument-parser==1.8.1", "Pillow==10.0.0"]
 
 [project.optional-dependencies]
-dev = ["pre-commit"]
+dev = ["pre-commit", "pytest"]
 
 [project.scripts]
 compsort = "src.cli.__main__:main"
