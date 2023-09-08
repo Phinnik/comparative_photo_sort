@@ -12,7 +12,7 @@ dependencies = ["typed-argument-parser==1.8.1", "Pillow==10.0.0"]
 dev = ["pre-commit"]
 
 [project.scripts]
-compsort = "src.__main__:main"
+compsort = "src.cli.__main__:main"
 
 [build-system]
 requires = ["setuptools>=43.0.0", "wheel"]
@@ -24,7 +24,9 @@ packages = ["src"]
 [tool.pylint."messages control"]
 disable = [
     "missing-module-docstring",
-    "missing-function-docstring"
+    "missing-function-docstring",
+    "too-few-public-methods",
+    "missing-class-docstring"
 ]
 
 [tool.mypy]
