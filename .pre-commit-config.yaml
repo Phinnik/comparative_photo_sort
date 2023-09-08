@@ -15,12 +15,6 @@ repos:
     hooks:
     -   id: black
 
-    # pylint
--   repo: https://github.com/pylint-dev/pylint
-    rev: v3.0.0a7
-    hooks:
-    -   id: pylint
-
     # flake8
 -   repo: https://github.com/PyCQA/flake8
     rev: 6.1.0
@@ -39,3 +33,13 @@ repos:
     hooks:
     -   id: isort
         name: isort (python)
+
+    # local hooks: pylint
+-   repo: local
+    hooks:
+    -   id: pylint
+        name: pylint
+        entry: pylint src tests
+        language: system
+        types: [python]
+        require_serial: true
